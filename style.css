@@ -1,0 +1,140 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Warna tema */
+:root {
+    --ungu-tua: #4B0082;
+    --ungu-muda: #8A2BE2;
+    --hitam: #1a1a1a;
+    --putih: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: var(--hitam);
+    color: var(--putih);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--putih);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--ungu-muda);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(75, 0, 130, 0.6)), 
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80') center/cover;
+    color: var(--putih);
+    text-align: center;
+    padding: 140px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: var(--ungu-muda);
+    color: var(--putih);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--ungu-tua);
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--putih);
+    color: var(--hitam);
+}
+
+.about h2 {
+    color: var(--ungu-tua);
+    margin-bottom: 20px;
+}
+
+/* Programs Section */
+.programs {
+    background-color: var(--hitam);
+    color: var(--putih);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.program-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--ungu-tua);
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--ungu-muda);
+    color: var(--putih);
+}
+
+/* Footer */
+footer {
+    background-color: var(--hitam);
+    color: var(--putih);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
