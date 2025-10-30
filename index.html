@@ -3,71 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMAN 1 Unggul Nusantara</title>
+    <title>Sekolah Harapan Bangsa - Ungu & Hitam Elegan</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">SMAN 1 UNGGUL NUSANTARA</div>
-            <ul class="nav-links">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#programs">Program</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
+
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">SHB</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#kontak" class="btn-kontak">Daftar Sekarang</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Selamat Datang di SMAN 1 Unggul Nusantara</h1>
-            <p>Mewujudkan generasi berprestasi, berkarakter, dan berwawasan global.</p>
-            <a href="#about" class="btn">Pelajari Lebih Lanjut</a>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Masa Depan **Cemerlang** Dimulai **Di Sini**</h2>
+                <p>Sekolah Harapan Bangsa: Mencetak generasi unggul yang berintegritas dan siap menghadapi tantangan global.</p>
+                <a href="#kontak" class="btn-utama">Jelajahi Program Kami</a>
+            </div>
+            
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>Tentang Sekolah Kami</h2>
-        <p>
-            SMAN 1 Unggul Nusantara merupakan sekolah menengah atas yang berkomitmen untuk 
-            menciptakan lingkungan belajar yang inovatif dan inspiratif. Kami fokus pada 
-            pengembangan akademik, karakter, serta keterampilan abad 21.
-        </p>
-    </section>
-
-    <!-- Programs Section -->
-    <section id="programs" class="programs">
-        <h2>Program Unggulan</h2>
-        <div class="program-cards">
-            <div class="card">
-                <h3>Program Sains</h3>
-                <p>Menyiapkan siswa menjadi peneliti muda dengan pendekatan berbasis proyek.</p>
-            </div>
-            <div class="card">
-                <h3>Program Bahasa</h3>
-                <p>Meningkatkan kemampuan komunikasi dan literasi global siswa.</p>
-            </div>
-            <div class="card">
-                <h3>Program Teknologi</h3>
-                <p>Mengasah kemampuan digital dan coding untuk masa depan.</p>
+    <section id="tentang" class="section">
+        <div class="container">
+            <h3>🏫 Tentang Sekolah Harapan Bangsa</h3>
+            <p>Berdiri sejak 1995, kami berkomitmen menyediakan lingkungan belajar yang inovatif, inspiratif, dan suportif. Kami fokus pada pengembangan akademis, karakter, dan keterampilan abad ke-21.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h4>2000+</h4>
+                    <p>Alumni Berprestasi</p>
+                </div>
+                <div class="stat-item">
+                    <h4>98%</h4>
+                    <p>Lulusan Melanjutkan Pendidikan</p>
+                </div>
+                <div class="stat-item">
+                    <h4>4.8/5</h4>
+                    <p>Rating Kepuasan Orang Tua</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Hubungi Kami</h2>
-        <p>Email: info@sman1unggul.sch.id | Telepon: (021) 1234 5678</p>
-        <a href="mailto:info@sman1unggul.sch.id" class="btn">Kirim Pesan</a>
+    <section id="program" class="section program-section">
+        <div class="container">
+            <h3>✨ Program Unggulan Kami</h3>
+            <div class="program-list">
+                <div class="program-card">
+                    <h4>Program **STEM** Intensif</h4>
+                    <p>Fokus pada Sains, Teknologi, Teknik, dan Matematika dengan kurikulum terintegrasi dan proyek nyata.</p>
+                </div>
+                <div class="program-card">
+                    <h4>Pendidikan **Karakter**</h4>
+                    <p>Pembentukan moral, etika, dan kepemimpinan melalui kegiatan ekstrakurikuler dan penugasan sosial.</p>
+                </div>
+                <div class="program-card">
+                    <h4>**Bahasa** Asing & Budaya</h4>
+                    <p>Kelas bahasa yang diperkaya dengan pertukaran budaya untuk kesiapan global (Mandarin & Spanyol).</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 SMAN 1 Unggul Nusantara. Semua Hak Dilindungi.</p>
+    <footer id="kontak">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Hubungi Kami</h4>
+                    <p>📍 Jl. Pendidikan No. 123, Kota Bahagia</p>
+                    <p>📧 info@shb.sch.id</p>
+                    <p>☎️ (021) 123-4567</p>
+                </div>
+                <div class="footer-cta">
+                    <h4>Tertarik Bergabung?</h4>
+                    <a href="#" class="btn-footer">Daftar Penerimaan Siswa Baru</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Sekolah Harapan Bangsa. Hak Cipta Dilindungi.</p>
+        </div>
     </footer>
+
 </body>
 </html>

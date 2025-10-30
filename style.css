@@ -1,140 +1,319 @@
-/* Reset dasar */
+/* Variabel Warna */
+:root {
+    --warna-primer: #6a0dad; /* Ungu Elegan (Royal Purple) */
+    --warna-sekunder: #4b0082; /* Ungu Gelap */
+    --warna-aksen: #ffc425; /* Kuning Emas untuk Aksen Kontras */
+    --warna-latar: #121212; /* Hitam Gelap */
+    --warna-teks-terang: #f0f0f0; /* Putih keabu-abuan */
+    --warna-teks-gelap: #333;
+}
+
+/* Reset dan Dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--warna-latar);
+    color: var(--warna-teks-terang);
 }
 
-/* Warna tema */
-:root {
-    --ungu-tua: #4B0082;
-    --ungu-muda: #8A2BE2;
-    --hitam: #1a1a1a;
-    --putih: #ffffff;
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background-color: var(--hitam);
-    color: var(--putih);
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: var(--putih);
+a {
     text-decoration: none;
-    font-weight: 500;
+    color: var(--warna-teks-terang);
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--ungu-muda);
+a:hover {
+    color: var(--warna-aksen);
+}
+
+/* Navigasi */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--warna-teks-terang);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--warna-primer);
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 25px;
+}
+
+.navbar nav ul li a {
+    font-weight: 400;
+    padding: 5px 10px;
+}
+
+.navbar .btn-kontak {
+    background-color: var(--warna-primer);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left: 15px;
+    border: 1px solid var(--warna-primer);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar .btn-kontak:hover {
+    background-color: var(--warna-sekunder);
+    border-color: var(--warna-sekunder);
+    color: var(--warna-teks-terang);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(75, 0, 130, 0.6)), 
-                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80') center/cover;
-    color: var(--putih);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('dummy-image-hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
     text-align: center;
-    padding: 140px 20px;
+    color: var(--warna-teks-terang);
+    margin-top: -60px; /* Kompensasi tinggi navbar */
+    position: relative;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 60px; /* Mendorong konten ke bawah agar tidak tertutup navbar */
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--warna-teks-terang);
+    line-height: 1.2;
+}
+
+.hero h2 strong {
+    color: var(--warna-primer);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    font-weight: 300;
 }
 
-.btn {
-    background-color: var(--ungu-muda);
-    color: var(--putih);
-    padding: 12px 25px;
-    border: none;
+.btn-utama {
+    display: inline-block;
+    background-color: var(--warna-aksen);
+    color: var(--warna-teks-gelap);
+    padding: 12px 30px;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 600;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: var(--ungu-tua);
+.btn-utama:hover {
+    background-color: #ffd700; /* Sedikit lebih cerah */
 }
 
-/* About Section */
-.about {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: var(--putih);
-    color: var(--hitam);
-}
-
-.about h2 {
-    color: var(--ungu-tua);
-    margin-bottom: 20px;
-}
-
-/* Programs Section */
-.programs {
-    background-color: var(--hitam);
-    color: var(--putih);
-    padding: 80px 20px;
+/* Section Umum */
+.section {
+    padding: 80px 0;
     text-align: center;
 }
 
-.program-cards {
+.section:nth-child(even) {
+    background-color: var(--warna-sekunder);
+}
+
+.section:nth-child(odd) {
+    background-color: var(--warna-latar);
+}
+
+.section h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--warna-aksen);
+}
+
+/* Section Tentang Kami */
+.stats {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 30px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.stat-item h4 {
+    font-size: 2.5rem;
+    color: var(--warna-aksen);
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    color: var(--warna-teks-terang);
+}
+
+/* Section Program */
+.program-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
     margin-top: 30px;
 }
 
-.card {
-    background-color: var(--ungu-tua);
-    padding: 25px;
-    width: 280px;
+.program-card {
+    background-color: var(--warna-sekunder);
+    padding: 30px;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 3px solid var(--warna-primer);
 }
 
-.card:hover {
-    transform: translateY(-8px);
+.program-section .program-card {
+    background-color: #240046; /* Ungu gelap khusus untuk card di section ini */
 }
 
-/* Contact Section */
-.contact {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: var(--ungu-muda);
-    color: var(--putih);
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer */
+.program-card h4 {
+    font-size: 1.4rem;
+    color: var(--warna-teks-terang);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.program-card strong {
+    color: var(--warna-aksen);
+}
+
+.program-card p {
+    color: var(--warna-teks-terang);
+    font-size: 0.95rem;
+}
+
+/* Footer & Kontak */
 footer {
-    background-color: var(--hitam);
-    color: var(--putih);
-    text-align: center;
-    padding: 15px;
+    background-color: #000;
+    color: var(--warna-teks-terang);
+    padding: 40px 0 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-info h4, .footer-cta h4 {
+    color: var(--warna-primer);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
     font-size: 0.9rem;
+}
+
+.btn-footer {
+    display: inline-block;
+    background-color: var(--warna-primer);
+    color: var(--warna-teks-terang);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-footer:hover {
+    background-color: var(--warna-sekunder);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsif Dasar */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin-bottom: 20px;
+    }
+
+    .program-list {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info, .footer-cta {
+        margin-bottom: 25px;
+    }
 }
